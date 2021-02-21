@@ -153,3 +153,21 @@
 	align-items: center!important;
 	font-family: 'Jua', sans-serif;
 }
+
+.footer {
+	background-color: #b7b7b7!important;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.font-body {
+	font-size: 0.6rem!important;
+	color: #FFFFFF!important;
+}
+
+.py-18 {
+	padding-top: .6rem!important;
+	padding-bottom: .6rem!important;
+}
