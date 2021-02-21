@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+			crossorigin="anonymous"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>컬러콤바인: 색 조합 찾기</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container mx-auto">
+			<div>
+				<nav class="navbar navbar-light">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="#">
+							<img
+								src="/docs/5.0/assets/brand/bootstrap-logo.svg"
+								alt=""
+								width="30"
+								height="24"
+								class="d-inline-block align-top"
+							/>
+							컬러콤바인
+						</a>
+					</div>
+				</nav>
+			</div>
+			<div id="title" class="d-flex justify-content-center text">2색 색조합</div>
+
+			
+			<div class="flex flex-col justify-around mt-8">
+				<div class="flex flex-col mb-8 md:flex-row">
+					<div class="flex-1 p-1">
+						<div
+							class="small-container rounded-lg shadow-lg"
+							style="background-color: rgb(241, 70, 104);"
+						>
+							<div class="flex flex-col p-8">
+								<div
+									class="mb-8 text-4 font-font"
+									style="color: rgb(255, 216, 128);"
+								>
+									제목
+								</div>
+								<div class="mb-8" style="color: rgb(255, 216, 128);">
+									붉은 계열: 식욕 자극 및 충동 구매 조장에 사용, 활동적인 색으로 눈에 잘 띄어 관심을 끌 수 있다.<br>노랑 계열: 낙천주의와 아동을 대표, 좌뇌를 자극해 기억력을 향상시키며, 눈에 잘 띄지만 눈을 지치게 하는 색으로 남용하지 않는 것이 좋다.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-10 p-1">
+						<div
+							class="palette rounded-lg shadow-lg w-8"
+							style="background-color: rgb(255, 255, 255);"
+						>
+							<div class="flex flex-col palette_bg p-6">
+								<div
+									class="flex-1 color c1"
+									style="background-color: rgb(241, 70, 104);"
+								>
+									<p id="p1" class="code" style="color: rgb(255, 216, 128);">
+										#F14668
+									</p>
+								</div>
+								<div
+									class="flex-1 color c2"
+									style="background-color: rgb(255, 216, 128);"
+								>
+									<p id="p2" class="code" style="color: rgb(241, 70, 104);">
+										#FFD880
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center w-9 p-15 flex-col">
+						<button
+							onclick="copyToClipboard('#p1')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(241, 70, 104);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+						<button
+							onclick="copyToClipboard('#p2')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(255, 216, 128);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="flex flex-col mb-8 md:flex-row">
+					<div class="flex-1 p-1">
+						<div
+							class="small-container rounded-lg shadow-lg"
+							style="background-color: rgb(125, 56, 244);"
+						>
+							<div class="flex flex-col p-8">
+								<div
+									class="mb-8 text-4 font-font"
+									style="color: rgb(253, 143, 128);"
+								>
+									제목
+								</div>
+								<div class="mb-8" style="color: rgb(253, 143, 128);">
+									보라 계열: 창의력, 상상력 및 지혜를 표현하기 위해 사용되며, 차분한 이미지의 색으로, 신비롭고 고급스러운 느낌을 주지만, 남용하면 양면성이 생긴다.<br>주황 계열: 구매를 장려하는 색으로 감정과 따뜻함을 반영한다.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-10 p-1">
+						<div
+							class="palette rounded-lg shadow-lg w-8"
+							style="background-color: rgb(255, 255, 255);"
+						>
+							<div class="flex flex-col palette_bg p-6">
+								<div
+									class="flex-1 color c1"
+									style="background-color: rgb(125, 56, 244);"
+								>
+									<p id="p3" class="code" style="color: rgb(253, 143, 128);">
+										#7D38F4
+									</p>
+								</div>
+								<div
+									class="flex-1 color c2"
+									style="background-color: rgb(253, 143, 128);"
+								>
+									<p id="p4" class="code" style="color: rgb(125, 56, 244);">
+										#FD8F80
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center w-9 p-15 flex-col">
+						<button
+							onclick="copyToClipboard('#p3')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(125, 56, 244);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+						<button
+							onclick="copyToClipboard('#p4')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(253, 143, 128);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="flex flex-col justify-around mt-8">
+				<div class="flex flex-col mb-8 md:flex-row">
+					<div class="flex-1 p-1">
+						<div
+							class="small-container rounded-lg shadow-lg"
+							style="background-color: rgb(123,154,204);"
+						>
+							<div class="flex flex-col p-8">
+								<div
+									class="mb-8 text-4 font-font"
+									style="color: rgb(252,246,245);"
+								>
+									제목
+								</div>
+								<div class="mb-8" style="color: rgb(252,246,245);">
+									푸른 계열: 신뢰감을 주고 생산성을 높이며, 브랜드에 대한 자신감을 나타낸다. 안정감을 주지만 식욕 감퇴 효과가 있어 식품 관련으로는 부적합하다. 본래 여성적인 색이나 남성적인 색으로 인식되는 경향이 있다.<br>흰색 계열: 세련되고 개방적이며 정직한 색으로, 현대적이고 깔끔한 느낌을 준다.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-10 p-1">
+						<div
+							class="palette rounded-lg shadow-lg w-8"
+							style="background-color: rgb(255, 255, 255);"
+						>
+							<div class="flex flex-col palette_bg p-6">
+								<div
+									class="flex-1 color c1"
+									style="background-color: rgb(123,154,204);"
+								>
+									<p id="p5" class="code" style="color: rgb(252,246,245);">
+										#7B9ACC
+									</p>
+								</div>
+								<div
+									class="flex-1 color c2"
+									style="background-color: rgb(252,246,245);"
+								>
+									<p id="p6" class="code" style="color: rgb(123,154,204);">
+										#FCF6F5
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center w-9 p-15 flex-col">
+						<button
+							onclick="copyToClipboard('#p5')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(123,154,204);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+						<button
+							onclick="copyToClipboard('#p6')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(252,246,245);"
+						>
+							<img
+								src="img/copy-black.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="flex flex-col mb-8 md:flex-row">
+					<div class="flex-1 p-1">
+						<div
+							class="small-container rounded-lg shadow-lg"
+							style="background-color: rgb(253,206,200);"
+						>
+							<div class="flex flex-col p-8">
+								<div
+									class="mb-8 text-4 font-font"
+									style="color: rgb(102,102,102);"
+								>
+									제목
+								</div>
+								<div class="mb-8" style="color: rgb(102,102,102);">
+									연분홍 계열: 낭만적이고 부드러운 색상으로, 온순함과 안정감, 순수함 등을 전달해준다.<br>짙은 회색 계열: 보수적이고 고전적인 세련된 색상으로, 신뢰감과 안정감을 주며, 우아한 느낌 또한 준다.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-10 p-1">
+						<div
+							class="palette rounded-lg shadow-lg w-8"
+							style="background-color: rgb(255, 255, 255);"
+						>
+							<div class="flex flex-col palette_bg p-6">
+								<div
+									class="flex-1 color c1"
+									style="background-color: rgb(253,206,200);"
+								>
+									<p id="p7" class="code" style="color: rgb(102,102,102);">
+										#FDCEC8
+									</p>
+								</div>
+								<div
+									class="flex-1 color c2"
+									style="background-color: rgb(102,102,102);"
+								>
+									<p id="p8" class="code" style="color: rgb(253,206,200);">
+										#666666
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center w-9 p-15 flex-col">
+						<button
+							onclick="copyToClipboard('#p7')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(253,206,200);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+						<button
+							onclick="copyToClipboard('#p8')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(102,102,102);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="flex flex-col justify-around mt-8">
+				<div class="flex flex-col mb-8 md:flex-row">
+					<div class="flex-1 p-1">
+						<div
+							class="small-container rounded-lg shadow-lg"
+							style="background-color: rgb(41,40,38);"
+						>
+							<div class="flex flex-col p-8">
+								<div
+									class="mb-8 text-4 font-font"
+									style="color: rgb(249,209,66);"
+								>
+									제목
+								</div>
+								<div class="mb-8" style="color: rgb(249,209,66);">
+									검은 계열: 강력하고 정교하며 비밀스러운 권위적인 색상으로, 세련되고 우아하여 고급 제품에 사용된다.<br>노랑 계열: 젊고 신선한 매력적인 색상으로, 창조적인 생각을 떠올리고 좌뇌를 자극해 기억력을 향상시키며, 눈에 잘 띄지만 눈을 지치게 하는 색으로 남용하지 않는 것이 좋다.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-10 p-1">
+						<div
+							class="palette rounded-lg shadow-lg w-8"
+							style="background-color: rgb(255, 255, 255);"
+						>
+							<div class="flex flex-col palette_bg p-6">
+								<div
+									class="flex-1 color c1"
+									style="background-color: rgb(41,40,38);"
+								>
+									<p id="p9" class="code" style="color: rgb(249,209,66);">
+										#292826
+									</p>
+								</div>
+								<div
+									class="flex-1 color c2"
+									style="background-color: rgb(249,209,66);"
+								>
+									<p id="p10" class="code" style="color: rgb(41,40,38);">
+										#F9D142
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center w-9 p-15 flex-col">
+						<button
+							onclick="copyToClipboard('#p9')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(41,40,38);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+						<button
+							onclick="copyToClipboard('#p10')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(249,209,66);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="flex flex-col mb-8 md:flex-row">
+					<div class="flex-1 p-1">
+						<div
+							class="small-container rounded-lg shadow-lg"
+							style="background-color: rgb(226,177,67);"
+						>
+							<div class="flex flex-col p-8">
+								<div
+									class="mb-8 text-4 font-font"
+									style="color: rgb(74,23,30);"
+								>
+									제목
+								</div>
+								<div class="mb-8" style="color: rgb(74,23,30);">
+									(짙은) 노랑 계열: 심리적으로 자신감을 얻게 해주며 새로운 아이디어를 얻도록 도움을 주는 색으로 기능을 자극하거나 상처를 회복시키는 기능이 있다. <br>갈색 계열: 안정적이며 대중적이고 친근한 색상으로, 고급스럽지만 자연스러운 느낌과 편안함을 전달해준다. 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-10 p-1">
+						<div
+							class="palette rounded-lg shadow-lg w-8"
+							style="background-color: rgb(255, 255, 255);"
+						>
+							<div class="flex flex-col palette_bg p-6">
+								<div
+									class="flex-1 color c1"
+									style="background-color: rgb(226,177,67);"
+								>
+									<p id="p11" class="code" style="color: rgb(74,23,30);">
+										#E2B143
+									</p>
+								</div>
+								<div
+									class="flex-1 color c2"
+									style="background-color: rgb(74,23,30);"
+								>
+									<p id="p12" class="code" style="color: rgb(226,177,67);">
+										#4A171E
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center w-9 p-15 flex-col">
+						<button
+							onclick="copyToClipboard('#p11')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(226,177,67);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+						<button
+							onclick="copyToClipboard('#p12')"
+							id="ashvin"
+							class="flex self-center justify-center w-12 h-12 mx-2 my-2 rounded-full shadow-lg outline-none md:mx-px"
+							style="background-color: rgb(74,23,30);"
+						>
+							<img
+								src="img/copy-white.svg"
+								alt="복사"
+								class="vert self-center"
+								width="20"
+								height="20"
+								viewbox="0 0 20 20"
+							/>
+						</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script>
+	function copyToClipboard(element) {
+		console.log('+++++++++++++++++++++++++++++++');
+		var $temp = $('<input>');
+		$('body').append($temp);
+		$temp.val($(element).text()).select();
+		var status = document.execCommand('copy');
+		if (status) {
+			console.log('=======done');
+		} else {
+			console.log('=======error');
+		}
+		$temp.remove();
+		 alert('복사 완료! 좋은 하루되세요:D');
+	}
+</script>
